@@ -1,0 +1,10 @@
+site_name: Portfolio SOC & DevOps
+theme:
+  name: material
+  palette: 
+    scheme: slate 
+    primary: indigo
+nav:
+  - Accueil: index.md
+  - Cybersecurité:
+    - 'SOC ELK': cybersecurite/soc-elk.md
