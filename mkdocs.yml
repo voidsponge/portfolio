@@ -2,6 +2,8 @@ site_name: Portfolio VoidSponge
 
 theme:
   name: material
+  features:
+    - navigation.indexes
   palette: 
     scheme: slate 
     primary: indigo
