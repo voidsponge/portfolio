@@ -10,7 +10,7 @@
 ---
 
 !!! danger "⚠️ DISCLAIMER"
-        Ce projet est une preuve de concept (PoC) développée à des fins éducatives. L'auteur décline toute responsabilité en cas d'utilisation malveillante.
+    Ce projet est une preuve de concept (PoC) développée à des fins éducatives. L'auteur décline toute responsabilité en cas d'utilisation malveillante.
     
 ## 🚀 Introduction
 
