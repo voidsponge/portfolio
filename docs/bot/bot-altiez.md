@@ -18,7 +18,8 @@ description: "Un bot intelligent pour automatiser les exercices de langue Altiss
 [:simple-github: Voir le code sur GitHub](https://github.com/voidsponge/altiez){ .md-button .md-button--primary }
 
 ---
-!!! danger **⚠️ DISCLAIMER** Ce projet est développé à des fins éducatives uniquement. Utilisez-le de manière responsable et en conformité avec les conditions d'utilisation d'Altissia. **L'auteur décline toute responsabilité en cas d'utilisation abusive.**
+!!! danger "⚠️ DISCLAIMER"
+Ce projet est développé à des fins éducatives uniquement. Utilisez-le de manière responsable et en conformité avec les conditions d'utilisation d'Altissia. **L'auteur décline toute responsabilité en cas d'utilisation abusive.**
 
 ## 🚀 Introduction
 
