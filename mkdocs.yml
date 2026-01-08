@@ -22,9 +22,15 @@ markdown_extensions:
 
 nav:
   - Accueil: index.md
-  - CYBERSECURITE:
-    - 'SOC ELK': cybersecurite/soc-elk.md
+  
+  - Cybersécurité:
+      - cybersecurite/index.md
+      - 'Projet SOC ELK': cybersecurite/soc-elk.md
+  
   - IA:
-    - 'Agent IA Cyber': ia/agent-ia.md
+      - ia/index.md
+      - 'Agent IA Cyber': ia/agent-ia.md
+
   - BOT:
-    - 'Bot Altiez': bot/bot-altiez.md
+      - bot/index.md
+      - 'Bot Altiez': bot/bot-altiez.md
