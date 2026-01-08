@@ -2,6 +2,8 @@
 
 ![Version](https://img.shields.io/badge/version-8.0-red?style=for-the-badge) ![Python](https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge&logo=python) ![Docker](https://img.shields.io/badge/Docker-Kali_Rolling-blue?style=for-the-badge&logo=docker) ![AI](https://img.shields.io/badge/Model-Gemini_2.5_Flash-orange?style=for-the-badge&logo=google)
 
+[:simple-github: Voir le code sur GitHub](https://github.com/voidsponge/pwnia){ .md-button .md-button--primary } 
+
 > **⚠️ DISCLAIMER** > *Ce projet est une preuve de concept (PoC) développée à des fins éducatives et de recherche en cybersécurité. Il est conçu pour être utilisé uniquement sur des environnements autorisés (CTF, Cyber Ranges, Réseaux privés). L'auteur décline toute responsabilité en cas d'utilisation malveillante.*
 
 ---
