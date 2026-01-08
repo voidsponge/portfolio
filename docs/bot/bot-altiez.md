@@ -15,14 +15,10 @@ description: "Un bot intelligent pour automatiser les exercices de langue Altiss
 ![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)
 ![Code style](https://img.shields.io/badge/code%20style-black-000000.svg)
 
-[**[:simple-github: Voir le code sur GitHub](https://github.com/voidsponge/altissia-bot)**](https://github.com/voidsponge/altissia-bot)
+[:simple-github: Voir le code sur GitHub](https://github.com/voidsponge/altiez){ .md-button .md-button--primary }
 
 ---
-
-> [!CAUTION]
-> **⚠️ DISCLAIMER**
->
-> Ce projet est développé à des fins éducatives uniquement. Utilisez-le de manière responsable et en conformité avec les conditions d'utilisation d'Altissia. **L'auteur décline toute responsabilité en cas d'utilisation abusive.**
+!!! danger **⚠️ DISCLAIMER** Ce projet est développé à des fins éducatives uniquement. Utilisez-le de manière responsable et en conformité avec les conditions d'utilisation d'Altissia. **L'auteur décline toute responsabilité en cas d'utilisation abusive.**
 
 ## 🚀 Introduction
 
