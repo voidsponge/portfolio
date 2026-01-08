@@ -10,6 +10,7 @@ theme:
 markdown_extensions:
   - attr_list            # Indispensable pour les boutons { .md-button }
   - admonition           # Indispensable pour les blocs "Info/Danger" (!!!)
+  - md_in_html
   - pymdownx.details     # Pour les blocs dépliants
   - pymdownx.superfences # Indispensable pour les onglets d'images (===)
   - pymdownx.emoji:      # Indispensable pour les logos (:simple-github:)
