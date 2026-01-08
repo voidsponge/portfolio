@@ -24,3 +24,5 @@ nav:
     - 'SOC ELK': cybersecurite/soc-elk.md
   - IA:
     - 'Agent IA Cyber': ia/agent-ia.md
+  - BOT:
+    - 'Bot Altiez': bot/bot_altiez.md
