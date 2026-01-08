@@ -50,6 +50,35 @@ Mais pas que ... Je suis avant tout passioné d'Informatique et de nouvelles tec
 
 ---
 
+# 🧭 Explorer par Catégorie
+
+<div class="grid cards" markdown>
+
+-   :material-shield-lock: **Cybersécurité**
+    
+    ---
+    Mes travaux de recherche en Blue Team (SOC, SIEM) et Red Team (Pentest).
+    
+    [:octicons-arrow-right-24: Explorer le dossier](cybersecurite/index.md)
+
+-   :material-robot: **Intelligence Artificielle**
+    
+    ---
+    Mes agents autonomes, LLMs et intégrations de modèles (Gemini, OpenAI).
+    
+    [:octicons-arrow-right-24: Explorer le dossier](ia/index.md)
+
+-   :material-console: **Développement & Bots**
+    
+    ---
+    Mes outils d'automatisation, scripts Python et bots Discord.
+    
+    [:octicons-arrow-right-24: Explorer le dossier](dev/index.md)
+
+</div>
+
+---
+
 ## 💻 Mes Compétences
 
 ### 💻 Langages & Scripting
