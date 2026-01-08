@@ -1,9 +1,22 @@
 site_name: Portfolio VoidSponge
+
 theme:
   name: material
   palette: 
     scheme: slate 
     primary: indigo
+
+# --- DÉBUT DES AJOUTS NÉCESSAIRES ---
+markdown_extensions:
+  - attr_list            # Indispensable pour les boutons { .md-button }
+  - admonition           # Indispensable pour les blocs "Info/Danger" (!!!)
+  - pymdownx.details     # Pour les blocs dépliants
+  - pymdownx.superfences # Indispensable pour les onglets d'images (===)
+  - pymdownx.emoji:      # Indispensable pour les logos (:simple-github:)
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+# --- FIN DES AJOUTS ---
+
 nav:
   - Accueil: index.md
   - Cybersecurité:
