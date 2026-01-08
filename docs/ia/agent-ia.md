@@ -1,12 +1,16 @@
 # 💀 PwnIA : Autonomous Offensive AI Agent (v8)
 
-![Version](https://img.shields.io/badge/version-8.0-red?style=for-the-badge) ![Python](https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge&logo=python) ![Docker](https://img.shields.io/badge/Docker-Kali_Rolling-blue?style=for-the-badge&logo=docker) ![AI](https://img.shields.io/badge/Model-Gemini_2.5_Flash-orange?style=for-the-badge&logo=google)
+![Version](https://img.shields.io/badge/version-8.0-red?style=for-the-badge)
+![Python](https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge&logo=python)
+![Docker](https://img.shields.io/badge/Docker-Kali_Rolling-blue?style=for-the-badge&logo=docker)
+![AI](https://img.shields.io/badge/Model-Gemini_2.5_Flash-orange?style=for-the-badge&logo=google)
 
-[:simple-github: Voir le code sur GitHub](https://github.com/voidsponge/pwnia){ .md-button .md-button--primary } 
-
-> **⚠️ DISCLAIMER** > *Ce projet est une preuve de concept (PoC) développée à des fins éducatives et de recherche en cybersécurité. Il est conçu pour être utilisé uniquement sur des environnements autorisés (CTF, Cyber Ranges, Réseaux privés). L'auteur décline toute responsabilité en cas d'utilisation malveillante.*
+[:simple-github: Voir le code sur GitHub](https://github.com/voidsponge/pwnia){ .md-button .md-button--primary }
 
 ---
+
+!!! danger "⚠️ DISCLAIMER"
+    Ce projet est une preuve de concept (PoC) développée à des fins éducatives et de recherche en cybersécurité. Il est conçu pour être utilisé uniquement sur des environnements autorisés (CTF, Cyber Ranges, Réseaux privés). **L'auteur décline toute responsabilité en cas d'utilisation malveillante.**
 
 ## 🚀 Introduction
 
@@ -14,7 +18,7 @@
 
 Piloté par le modèle **Gemini 2.5 Flash**, il possède des "yeux" pour voir le Web, des "mains" pour exécuter des outils Kali Linux, et une "mémoire" pour ne jamais perdre le fil de sa mission.
 
-Il scanne, analyse, exploite et rapporte ses découvertes sans intervention humaine.
+Il peut agir en **autonomie totale** ou devenir votre **binôme de hacking** (CTF Companion) via une interface de chat interactive.
 
 ---
 
@@ -22,12 +26,12 @@ Il scanne, analyse, exploite et rapporte ses découvertes sans intervention huma
 
 | Module | Description |
 | :--- | :--- |
-| **🧠 Mission Brain** | Gestion d'état JSON persistante. L'agent sait toujours où il en est (Ports, Vulns, Loot). |
+| **🧠 Mission Brain** | Gestion d'état persistante. L'agent sait toujours où il en est (Ports, Vulns, Loot) et apprend de ses erreurs. |
+| **💬 Interactive Shell** | Mode conversationnel pour discuter stratégie, demander des scans précis et résoudre des CTF en duo. |
 | **👁️ Computer Vision** | Utilisation de **Selenium** pour capturer et analyser visuellement les pages Web cibles. |
-| **⚡ Nuclei Scanner** | Intégration du scanner le plus rapide du marché pour détecter les failles Web critiques en quelques secondes. |
-| **☢️ Metasploit RPC** | Pilotage complet du framework Metasploit pour lancer des exploits complexes (RCE, EternalBlue...). |
-| **🕵️ Advanced Looter** | Moteur de Regex intelligent pour exfiltrer automatiquement des secrets (AWS Keys, Shadow Hash, SSH Keys). |
-| **🖥️ C2 Dashboard** | Interface de commandement **Streamlit** pour suivre l'attaque en temps réel (Logs & Visuels). |
+| **⚡ Nuclei Scanner** | Intégration du scanner le plus rapide du marché pour détecter les failles Web critiques. |
+| **☢️ Metasploit RPC** | Pilotage complet du framework Metasploit pour lancer des exploits complexes. |
+| **💾 Save & Resume** | Sauvegarde contextuelle complète : l'agent "se souvient" de la session précédente après un redémarrage. |
 | **📝 Auto-Reporting** | Génération automatique d'un rapport HTML professionnel en fin de mission. |
 
 ---
@@ -43,27 +47,24 @@ L'agent repose sur une architecture modulaire dockerisée :
 
 ---
 
-## 🛠️ Installation & Utilisation
+## 🛠️ Installation & Démarrage
 
 ### Prérequis
 * Docker & Docker Compose
 * Une clé API Google Gemini (`GOOGLE_API_KEY`)
 
 ### 1. Installation
-```bash
-# Cloner le repo (si applicable)
+
+```bash title="Terminal"
 git clone https://github.com/voidsponge/pwnia.git
 cd pwnia
-
-# Construire l'image Docker (inclut Kali, Nuclei, Metasploit)
 docker build -t pwnia-gold .
 
 ```
 
-### 2. Lancement du C2 Server (Dashboard + Agent)
+### 2. Lancement de l'environnement avec dashboard
 
-```bash
-# Lance le conteneur avec le port 8501 ouvert pour le Dashboard
+```bash title="Docker Run"
 docker run -it --rm --network host \
   -v $(pwd)/pwn_memory:/app/chroma_db \
   -v $(pwd):/app \
@@ -73,44 +74,100 @@ docker run -it --rm --network host \
 
 ```
 
-### 3. Démarrage
+### 3. Lancement de l'environnement en Shell
 
-Dans le conteneur, lancez ces deux commandes (dans un multiplexer ou en background) :
-
-```bash
-# 1. Lancer le Dashboard
-streamlit run dashboard.py &
-
-# 2. Lancer l'Agent
-python3 pwn_agent.py
+```bash title="Docker Run"
+docker run -it --rm --network host \
+  -v $(pwd)/pwn_memory:/app/chroma_db \
+  -v $(pwd):/app \
+  -e GOOGLE_API_KEY="TA_CLE_ICI" \
+  pwnia-gold
 
 ```
 
-Rendez-vous sur `http://localhost:8501` pour voir le QG.
+---
+
+## 🔥 Modes d'Utilisation
+
+PwnIA s'adapte à votre style de travail. Choisissez votre interface :
+
+=== "⌨️ Mode Interactif (CLI)"
+
+```
+Idéal pour les **CTF** et le travail de précision. Vous discutez avec l'agent dans le terminal. Il agit comme un copilote expert.
+
+**Lancement :**
+
+docker run -it --rm --network host \
+  -v $(pwd)/pwn_memory:/app/chroma_db \
+  -v $(pwd):/app \
+  -e GOOGLE_API_KEY="TA_CLE_ICI" \
+  pwnia-gold
+
+```
+
+**Exemple de session :**
+```text
+(PwnIA) > Ready. Waiting for orders.
+User > On s'attaque à la box 10.10.11.23. Commence par un scan rapide.
+
+(PwnIA) > [RUNNING] nmap -sC -sV -p- --min-rate 1000 10.10.11.23
+(PwnIA) > Scan terminé. Ports ouverts : 22 (SSH), 80 (HTTP).
+          Le port 80 héberge un "Apache 2.4.41".
+          Veux-tu que je lance Nuclei ou que j'inspecte le code source ?
+
+User > Inspecte la page et sauvegarde l'état, je reprends demain.
+
+(PwnIA) > [VISION] Screenshot pris. Analyse en cours...
+          [MEMORY] État sauvegardé dans 'session_ctf_box1.json'. À demain !
+```
+
+=== "🖥️ Mode Dashboard (Auto)"
+
+```
+Idéal pour le **Red Teaming** de masse ou la surveillance. L'agent travaille seul et affiche les résultats sur une interface web.
+
+**Lancement :**
+docker run -it --rm --network host \
+  -v $(pwd)/pwn_memory:/app/chroma_db \
+  -v $(pwd):/app \
+  -e GOOGLE_API_KEY="TA_CLE_ICI" \
+  -p 8501:8501 \
+  pwnia-gold bash
+
+streamlit run dashboard.py
+python3 pwn_agent.py 
+```
+
+Rendez-vous sur `http://localhost:8501`.
+
+* **Auto-Pilot :** Entrez simplement la cible "auto "ip" ou "url", l'agent gère tout (Recon -> Exploitation -> Report).
+* **Live Feed :** Voir les actions et les captures d'écran en temps réel.
 
 ---
 
-## 🎯 Scénario d'Attaque (Demo)
+## 🧠 Mémoire & Persistance
 
-Commande envoyée à l'agent :
+L'une des plus grandes forces de **PwnIA** est sa capacité à apprendre et à retenir l'information.
 
-> **Hack >** `auto scanme.nmap.org`
+### Sauvegarde de Contexte (Long-term Memory)
 
-**Déroulement autonome :**
+Contrairement aux scripts classiques qui oublient tout à la fermeture, PwnIA utilise une base de données vectorielle (ChromaDB) et des fichiers JSON d'état.
 
-1. **[RECON]** Découverte des ports 80 (HTTP) et 22 (SSH).
-2. **[VISION]** Capture d'écran de la page d'accueil (visible sur le Dashboard).
-3. **[VULN]** Lancement de **Nuclei** sur le port 80 -> Aucune faille critique immédiate.
-4. **[BRUTE]** Tentative de brute-force Hydra sur le SSH (simulé).
-5. **[REPORT]** Génération du fichier `RAPPORT_scanme.html` avec le résumé de la surface d'attaque.
+* **Commandes de mémoire :**
+* `save <nom_session>` : Snapshot complet de la connaissance actuelle (IPs, technos, mots de passe trouvés).
+* `load <nom_session>` : Restaure l'agent exactement là où vous l'avez laissé.
+* `learn <fichier>` : Donne un write-up ou une doc technique à l'agent pour qu'il apprenne une nouvelle technique d'attaque spécifique pour le futur.
+
+
 
 ---
 
 ## 🛡️ Sécurité & Éthique
 
-* **Pas de Persistance :** L'agent est configuré pour l'audit. Il ne crée pas de backdoors, ne modifie pas les crontabs et n'installe pas de rootkits.
-* **Sandbox Docker :** L'agent tourne dans un conteneur isolé pour éviter toute fuite ou modification du système hôte.
-* **Human-in-the-loop (Optionnel) :** Le mode manuel permet de valider chaque action avant exécution.
+* **Pas de Persistance Malveillante :** L'agent est configuré pour l'audit. Il ne crée pas de backdoors persistantes sur les cibles.
+* **Sandbox Docker :** L'agent tourne dans un conteneur isolé pour éviter toute fuite vers le système hôte.
+* **Human-in-the-loop :** En mode interactif, aucune commande destructrice n'est lancée sans validation explicite.
 
 ---
 
@@ -118,7 +175,11 @@ Commande envoyée à l'agent :
 
 * 🐍 **Python 3.11** (Core Logic)
 * 🐳 **Docker** (Environment Kali Linux)
-* 🧠 **Google Gemini** (Decision Making)
+* 🧠 **Google Gemini** (Reasoning & Code Gen)
 * 🕷️ **Selenium** (Computer Vision)
+* 🗄️ **ChromaDB** (RAG Memory)
 * ⚡ **Nuclei & Metasploit** (Offensive Tools)
-* 📊 **Streamlit** (Frontend Dashboard)
+
+---
+
+*Projet réalisé par VoidSponge.*
