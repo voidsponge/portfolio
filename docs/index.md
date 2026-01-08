@@ -50,7 +50,7 @@ Mais pas que ... Je suis avant tout passioné d'Informatique et de nouvelles tec
 
 ---
 
-# 🧭 Explorer par Catégorie
+## 🧭 Explorer par Catégorie
 
 <div class="grid cards" markdown>
 
