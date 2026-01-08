@@ -32,6 +32,13 @@ Mais pas que ... Je suis avant tout passioné d'Informatique et de nouvelles tec
     
     [:octicons-arrow-right-24: Voir le projet](ia/agent-ia.md)
 
+-   :material-robot: **Bot Altiez**
+    
+    ---
+    Un bot qui fera votre Anglais à votre place ;)
+    
+    [:octicons-arrow-right-24: Voir le projet](bot/bot-altiez.md)
+
 -   :material-code-braces: **Projet à venir**
     
     ---
