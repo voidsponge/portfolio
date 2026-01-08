@@ -98,12 +98,12 @@ Idéal pour les **CTF** et le travail de précision. Vous discutez avec l'agent 
 
 **Lancement :**
 
+```bash
 docker run -it --rm --network host \
   -v $(pwd)/pwn_memory:/app/chroma_db \
   -v $(pwd):/app \
   -e GOOGLE_API_KEY="TA_CLE_ICI" \
   pwnia-gold
-
 ```
 
 **Exemple de session :**
@@ -128,21 +128,39 @@ User > Inspecte la page et sauvegarde l'état, je reprends demain.
 Idéal pour le **Red Teaming** de masse ou la surveillance. L'agent travaille seul et affiche les résultats sur une interface web.
 
 **Lancement :**
-docker run -it --rm --network host \
-  -v $(pwd)/pwn_memory:/app/chroma_db \
-  -v $(pwd):/app \
-  -e GOOGLE_API_KEY="TA_CLE_ICI" \
-  -p 8501:8501 \
-  pwnia-gold bash
-
-streamlit run dashboard.py
+```bash
+# 1. Dans le conteneur bash
+streamlit run dashboard.py &
 python3 pwn_agent.py 
 ```
 
 Rendez-vous sur `http://localhost:8501`.
 
-* **Auto-Pilot :** Entrez simplement la cible "auto "ip" ou "url", l'agent gère tout (Recon -> Exploitation -> Report).
+* **Auto-Pilot :** Entrez simplement la cible "auto <ip>" ou "<url>", l'agent gère tout (Recon -> Exploitation -> Report).
 * **Live Feed :** Voir les actions et les captures d'écran en temps réel.
+
+---
+
+## 📚 Alimenter la Base de Connaissance (RAG)
+
+Pour que l'agent soit performant, vous devez nourrir sa mémoire à long terme avec des documents techniques (Writeups, CheatSheets, CVE PoCs). Utilisez le script `feed_brain.py` inclus.
+
+**Formats supportés :** `.pdf`, `.md`, `.txt`
+
+1. Dans le dossier local `knwoledge`, depose des writeups ou meme des documents techniques en `.md`.
+2. Lancez la commande d'ingestion via Docker :
+
+```bash title="Ingestion de données"
+docker run -it --rm \
+  -v $(pwd)/pwn_memory:/app/chroma_db \
+  -v $(pwd)/knowledge:/app/knowledge_input \
+  -e GOOGLE_API_KEY=CLE_API \
+  pwnia-gold python3 feed_brain.py
+
+```
+
+!!! success "Résultat"
+Le script va scanner le dossier, vectoriser le contenu via l'API Gemini et le stocker dans `pwn_memory/`. Ces connaissances seront immédiatement accessibles par l'agent via la commande RAG.
 
 ---
 
@@ -158,8 +176,6 @@ Contrairement aux scripts classiques qui oublient tout à la fermeture, PwnIA ut
 * `save <nom_session>` : Snapshot complet de la connaissance actuelle (IPs, technos, mots de passe trouvés).
 * `load <nom_session>` : Restaure l'agent exactement là où vous l'avez laissé.
 * `learn <fichier>` : Donne un write-up ou une doc technique à l'agent pour qu'il apprenne une nouvelle technique d'attaque spécifique pour le futur.
-
-
 
 ---
 
