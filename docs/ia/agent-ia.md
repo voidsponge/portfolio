@@ -98,7 +98,6 @@ Idéal pour les **CTF** et le travail de précision. Vous discutez avec l'agent 
 
 **Lancement :**
 
-```bash
 docker run -it --rm --network host \
   -v $(pwd)/pwn_memory:/app/chroma_db \
   -v $(pwd):/app \
@@ -128,7 +127,7 @@ User > Inspecte la page et sauvegarde l'état, je reprends demain.
 Idéal pour le **Red Teaming** de masse ou la surveillance. L'agent travaille seul et affiche les résultats sur une interface web.
 
 **Lancement :**
-```bash
+
 # 1. Dans le conteneur bash
 streamlit run dashboard.py &
 python3 pwn_agent.py 
