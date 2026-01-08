@@ -136,7 +136,27 @@ python run.py --auto --exercise 1
 
 ---
 
-*Projet réalisé par Elhoyr / Tokzen / VoidSponge*
+## 🤝 L'Équipe du Projet
 
-https://github.com/Elohyrr
-https://github.com/Tokzeen
+<div class="grid cards" markdown>
+
+-   :material-account-circle: **VoidSponge**
+    
+    ---
+    
+    [:simple-github: GitHub](https://github.com/voidsponge)
+
+-   :material-account-cowboy-hat: **Elohyrr**
+    
+    ---
+    Lead Dev
+    
+    [:simple-github: GitHub](https://github.com/Elohyrr)
+
+-   :material-account-hard-hat: **Tokzeen**
+    
+    ---
+    
+    [:simple-github: GitHub](https://github.com/Tokzeen)
+
+</div>
