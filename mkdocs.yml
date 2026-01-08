@@ -20,7 +20,7 @@ markdown_extensions:
 
 nav:
   - Accueil: index.md
-  - Cybersecurité:
+  - CYBERSECURITE:
     - 'SOC ELK': cybersecurite/soc-elk.md
   - IA:
     - 'Agent IA Cyber': ia/agent-ia.md
