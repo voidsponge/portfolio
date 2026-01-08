@@ -73,7 +73,7 @@ Mais pas que ... Je suis avant tout passioné d'Informatique et de nouvelles tec
     ---
     Mes outils d'automatisation, scripts Python et bots Discord.
     
-    [:octicons-arrow-right-24: Explorer le dossier](dev/index.md)
+    [:octicons-arrow-right-24: Explorer le dossier](bot/index.md)
 
 </div>
 
