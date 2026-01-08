@@ -1,13 +1,3 @@
----
-layout: post
-title: "Altissia Bot : Intelligent Language Exercise Automation"
-date: 2024-01-08
-categories: [Automation, Python, Playwright, EdTech]
-tags: [automation, python, playwright, selenium-alternative, bot]
-image: https://img.shields.io/badge/status-active-success?style=for-the-badge
-description: "Un bot intelligent pour automatiser les exercices de langue Altissia avec une stratégie à double phase."
----
-
 # 🤖 Altissia Bot : Intelligent Language Exercise Automation
 
 ![Python](https://img.shields.io/badge/python-3.7+-blue.svg)
@@ -19,8 +9,8 @@ description: "Un bot intelligent pour automatiser les exercices de langue Altiss
 
 ---
 !!! danger "⚠️ DISCLAIMER"
-Ce projet est développé à des fins éducatives uniquement. Utilisez-le de manière responsable et en conformité avec les conditions d'utilisation d'Altissia. **L'auteur décline toute responsabilité en cas d'utilisation abusive.**
-
+    Ce projet est une preuve de concept (PoC) développée à des fins éducatives et de recherche en cybersécurité. **L'auteur décline toute responsabilité en cas d'utilisation malveillante.**
+    
 ## 🚀 Introduction
 
 **Altissia Bot** n'est pas qu'un simple script de clic. C'est une solution d'automatisation **intelligente** conçue pour résoudre les exercices de langue Altissia.
