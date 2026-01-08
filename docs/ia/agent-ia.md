@@ -43,22 +43,6 @@ L'agent repose sur une architecture modulaire dockerisée :
 
 ---
 
-## 📸 Aperçu (Screenshots)
-
-### 1. Le Terminal (Lancement & ASCII Art)
-*L'agent démarre avec une séquence de boot stylisée.*
-`[Image Placeholder: Terminal Startup]`
-
-### 2. Le Dashboard C2 (Streamlit)
-*Surveillance en temps réel des ports, vulnérabilités et du flux vidéo.*
-`[Image Placeholder: Dashboard View]`
-
-### 3. Le Rapport Final (HTML)
-*Exemple de rapport généré après une compromission réussie.*
-`[Image Placeholder: HTML Report]`
-
----
-
 ## 🛠️ Installation & Utilisation
 
 ### Prérequis
@@ -138,17 +122,3 @@ Commande envoyée à l'agent :
 * 🕷️ **Selenium** (Computer Vision)
 * ⚡ **Nuclei & Metasploit** (Offensive Tools)
 * 📊 **Streamlit** (Frontend Dashboard)
-
----
-
-*Projet réalisé par [Ton Nom/Pseudo].*
-*Code disponible sur demande / GitHub.*
-
-```
-
-### ✨ Les petits trucs à modifier :
-1.  **Screenshots :** Remplace les lignes `[Image Placeholder...]` par de vraies images `![Titre](chemin_vers_image.png)`.
-2.  **Lien GitHub :** Mets le lien de ton repo si tu en as un.
-3.  **Ton Nom :** Signe à la fin !
-
-```
